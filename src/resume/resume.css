@@ -1,152 +1,123 @@
-
 #resumecontainer {
-    margin: 0 auto;
-    height: 100vh;
-    width: 100vw;
-    /* min-width: 1000px; */
-    color: #000000;
-    background-image: url("../assets/grass_day.png");
-    font: 1.1em "Times New Roman";
-    line-height: 1.2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* overflow: auto; */
-    padding: 10 10;
-    /* white-space: nowrap; */
-
+  color: #000000;
+  font: 1.1em "Times New Roman";
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* min-height: 100vh; */
 }
 
 #resume {
-    
-    max-height: 2000px;
-    /* min-width: 700px; */
-    overflow: auto;
-    margin: 0 auto;
-    max-width: 800px;
-    /* max-width: 2550px; */
-    padding: 40px 60px;
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-shadow: 2px 2px 4px #AAAAAA;
-    -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: 2px 2px 4px #AAAAAA;
+  -webkit-box-shadow: 2px 2px 4px #AAAAAA;
 }
 
 h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 200%;
-    margin: 0;
-    padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-    border-bottom: 1px solid #000000;
-    text-transform: uppercase;
-    font-size: 130%;
-    margin: 1em 0 0 0;
-    padding: 0;
+  border-bottom: 1px solid #000000;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  margin: 1em 0 0 0;
+  padding: 0;
 }
 
 h3 {
-    font-size: 100%;
-    margin: 0.8em 0 0.3em 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  font-size: 1.2em;
+  margin: 0.8em 0 0.3em 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 p {
-    margin: 0 0 0.5em 0;
-    padding: 0;
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+  padding: 0;
 }
 
 ul {
-    padding: 0;
-    margin: 0 1.5em;
+  padding: 0;
+  margin: 0 1.5em;
 }
 
 /* ul immediately after h1 = contact list */
 h1+ul {
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1+ul>li {
-    display: inline;
-    white-space: pre;
-    list-style-type: none;
+  font-size: 1em;
+  display: inline;
+  white-space: pre;
+  list-style-type: none;
 }
 
 h1+ul>li:after {
-    content: "  \2022  ";
+  font-size: 1em;
+  content: " \2022 ";
 }
 
 h1+ul>li:last-child:after {
-    content: "";
+  font-size: 1em;
+  content: "";
 }
 
 /* p immediately after contact list = summary */
 h1+ul+p {
-    margin: 1em 0;
+  font-size: 1em;
+  margin: 1em 0;
 }
 
-@media print {
-    body {
-        font-size: 10pt;
-        margin: 0;
-        padding: 0;
-        background: none;
-    }
-
-    #resume {
-        margin: 0;
-        padding: 0;
-        border: 0px;
-        background: none;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-
-    /* Do not underline abbr tags in PDF */
-    abbr {
-        text-decoration: none;
-        font-variant: none;
-    }
-
-    /* Make links black in PDF */
-    /* Move this outside the print block to apply this in HTML too */
-    a,
-    a:link,
-    a:visited,
-    a:hover {
-        color: #000000;
-        text-decoration: underline;
-    }
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #resumecontainer {
+    font-size: 0.9em;
+  }
+  
+  #resume {
+    padding: 30px 40px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-@page {
-    /* Change margins and paper size of PDF */
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
-    size: letter;
-    margin: 0.5in 0.8in;
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 16pt;
-        margin: 0;
-        padding: 0;
-        background: #FFFFFF !important;
-    }
-
-    #resume {
-        margin: 0;
-        padding: 1em;
-        border: 0px;
-        background: none;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
+@media (max-width: 480px) {
+  #resumecontainer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+  
+  #resume {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
 }
