@@ -1,0 +1,19 @@
+@keyframes foodPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.food {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  z-index: 1;
+  animation: foodPulse 2s ease-in-out infinite;
+}
+  

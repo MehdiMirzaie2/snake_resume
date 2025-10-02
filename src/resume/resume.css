@@ -1,11 +1,17 @@
 #resumecontainer {
-  color: #000000;
-  font: 1.1em "Times New Roman";
-  line-height: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+	  /* background: url("../assets/grass_day.png"); */
+  color: #1e293b;
+  font: 1.1em "Times New Roman", serif;
+  line-height: 1.4;
+  /* background-color: aqua; */
+  max-height: 90vh;
+  overflow: auto;
+  /* display: flex; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  /* padding: 20px; */
+  /* overflow: scroll; */
+  /* height: 800px; */
   /* min-height: 100vh; */
 }
 
@@ -14,29 +20,36 @@
   max-width: 850px;
   margin: 0 auto;
   padding: 40px 60px;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
-  box-shadow: 2px 2px 4px #AAAAAA;
-  -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+  background: rgba(255, 255, 255, 0.98);
+  border: 3px solid #334155;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-h1 {
+#resume h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 3em;
   margin: 0;
   padding: 0;
+  color: #0f172a;
+  text-shadow: none;
+  position: static;
+  transform: none;
+  letter-spacing: 2px;
+  animation: none;
 }
 
-h2 {
-  border-bottom: 1px solid #000000;
+#resume h2 {
+  border-bottom: 2px solid #334155;
   text-transform: uppercase;
   font-size: 1.3em;
-  margin: 1em 0 0 0;
-  padding: 0;
+  margin: 1em 0 0.5em 0;
+  padding: 0 0 0.3em 0;
+  color: #1e293b;
 }
 
-h3 {
+#resume h3 {
   font-size: 1.2em;
   margin: 0.8em 0 0.3em 0;
   padding: 0;
@@ -44,80 +57,57 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5em;
+  color: #334155;
 }
 
-p {
+#resume p {
   margin: 0 0 0.5em 0;
   font-size: 1em;
   padding: 0;
+  color: #475569;
 }
 
-ul {
+#resume ul {
   padding: 0;
   margin: 0 1.5em;
+  color: #475569;
 }
 
-/* ul immediately after h1 = contact list */
-h1+ul {
+/* Contact list styling */
+#resume h1 + ul {
   text-align: center;
-  margin: 0;
+  margin: 0.5em 0;
   padding: 0;
 }
 
-h1+ul>li {
+#resume h1 + ul > li {
   font-size: 1em;
   display: inline;
   white-space: pre;
   list-style-type: none;
+  color: #64748b;
 }
 
-h1+ul>li:after {
+#resume h1 + ul > li:after {
   font-size: 1em;
-  content: " \2022 ";
+  content: " • ";
 }
 
-h1+ul>li:last-child:after {
+#resume h1 + ul > li:last-child:after {
   font-size: 1em;
   content: "";
 }
 
-/* p immediately after contact list = summary */
-h1+ul+p {
+/* Summary paragraph */
+#resume h1 + ul + p {
   font-size: 1em;
   margin: 1em 0;
+  color: #475569;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  #resumecontainer {
-    font-size: 0.9em;
-  }
-  
-  #resume {
-    padding: 30px 40px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-  }
-  
-  h3 {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  #resumecontainer {
-    font-size: 0.8em;
-    padding: 10px;
-  }
-  
-  #resume {
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 2em;
-  }
+.first {
+	  font-size: 48px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 import melon from "../assets/water-melon.png"
-
+import "./Food.css"
 interface foodProps {
   dot: number[];
 }
